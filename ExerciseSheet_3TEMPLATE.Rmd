@@ -56,6 +56,9 @@ b)  Push your code to this new repository by copying and executing the snippet o
 
 c)  Regularly push your latest changes to GitHub again and especially do so when you are finished with this sheet.
 
+### Task 2) - Subtask c) 
+- Latest changes upload(ed)
+
 ## Exercise 3: Baby-Names in Munich (3.5 Points)
 
 Download the latest open datasets on given names ("Vornamen") from the open data repository of the city of Munich for the years `2023` and `2022`.
