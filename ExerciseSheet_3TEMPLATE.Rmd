@@ -138,6 +138,8 @@ cat("Sum of babys in 2022:", total_2022, "\n")
 
 d)  Add a new column `year` to both datasets which holds the correct year for each.
 
+### Task 3) Subtask d)
+
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 
 ## For vornamen_23
