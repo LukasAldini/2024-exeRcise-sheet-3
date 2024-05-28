@@ -50,6 +50,10 @@ a)  Create a new repository on GitHub in your account named `exeRcise-sheet-3`. 
 - Link to the GitHub repository: https://github.com/LukasAldini/2024-exeRcise-sheet-3
 
 b)  Push your code to this new repository by copying and executing the snippet on github listed under `…or push an existing repository from the command line`.
+
+### Task 2) - Subtask b)
+- I have linked the Rmd directly via GitHub, so I can upload directly via “Commit”, “Pull” and then “Push” without having to use the command prompt. (Link to the guide on how I did it: https://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html). 
+
 c)  Regularly push your latest changes to GitHub again and especially do so when you are finished with this sheet.
 
 ## Exercise 3: Baby-Names in Munich (3.5 Points)
