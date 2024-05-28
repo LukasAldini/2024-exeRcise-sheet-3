@@ -98,6 +98,18 @@ vornamen_23 <- vornamen_23 %>%
 vornamen_22 <- vornamen_22 %>%
   mutate(Anzahl = ifelse(Anzahl == "4 oder weniger", 2, Anzahl))
 
+## Make it numeric for 2023
+vornamen_23 <- vornamen_23 %>%
+  mutate(Anzahl = as.numeric(Anzahl))
+
+## Make it numeric for 2022
+vornamen_22 <- vornamen_22 %>%
+  mutate(Anzahl = as.numeric(Anzahl))
+
+## Check type of "Anzahl" 
+mode(vornamen_22$Anzahl)
+mode(vornamen_23$Anzahl)
+
 ## Checkup after mutate
 knitr::kable(head(vornamen_23, n = 10), caption = "vornamen_23 with mutated Anzahl")
 knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anzahl")
@@ -107,6 +119,20 @@ knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anza
 - The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved. 
 
 c)  Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?
+
+### Task 3) Subtask c)
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+## Calc. total
+total_2023 <- sum(vornamen_23$Anzahl, na.rm = TRUE)
+total_2022 <- sum(vornamen_22$Anzahl, na.rm = TRUE)
+
+## Print calculated total
+cat("Sum of babys in 2023:", total_2023, "\n")
+cat("Sum of babys in 2022:", total_2022, "\n")
+```
+
+- There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.
 
 d)  Add a new column `year` to both datasets which holds the correct year for each.
 

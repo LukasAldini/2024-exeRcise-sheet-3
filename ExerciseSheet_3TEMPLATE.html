@@ -2585,64 +2585,66 @@ distill-header .nav a {
 </table>
 <pre><code>[1] &quot;character&quot;</code></pre>
 <pre><code>[1] &quot;character&quot;</code></pre>
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<pre><code>[1] &quot;numeric&quot;</code></pre>
 <table>
 <caption><span id="tab:unnamed-chunk-1">Table 1: </span>vornamen_23 with mutated Anzahl</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Vorname</th>
-<th style="text-align: left;">Anzahl</th>
+<th style="text-align: right;">Anzahl</th>
 <th style="text-align: left;">Geschlecht</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Leon</td>
-<td style="text-align: left;">107</td>
+<td style="text-align: right;">107</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Maximilian</td>
-<td style="text-align: left;">105</td>
+<td style="text-align: right;">105</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Emilia</td>
-<td style="text-align: left;">89</td>
+<td style="text-align: right;">89</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Paul</td>
-<td style="text-align: left;">89</td>
+<td style="text-align: right;">89</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Noah</td>
-<td style="text-align: left;">83</td>
+<td style="text-align: right;">83</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Anton</td>
-<td style="text-align: left;">80</td>
+<td style="text-align: right;">80</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Jakob</td>
-<td style="text-align: left;">80</td>
+<td style="text-align: right;">80</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Felix</td>
-<td style="text-align: left;">78</td>
+<td style="text-align: right;">78</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Leo</td>
-<td style="text-align: left;">74</td>
+<td style="text-align: right;">74</td>
 <td style="text-align: left;">m</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Elias</td>
-<td style="text-align: left;">72</td>
+<td style="text-align: right;">72</td>
 <td style="text-align: left;">m</td>
 </tr>
 </tbody>
@@ -2652,59 +2654,59 @@ distill-header .nav a {
 <thead>
 <tr class="header">
 <th style="text-align: left;">Vorname</th>
-<th style="text-align: left;">Anzahl</th>
+<th style="text-align: right;">Anzahl</th>
 <th style="text-align: left;">Geschlecht</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Emilia</td>
-<td style="text-align: left;">103</td>
+<td style="text-align: right;">103</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Emma</td>
-<td style="text-align: left;">101</td>
+<td style="text-align: right;">101</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mia</td>
-<td style="text-align: left;">93</td>
+<td style="text-align: right;">93</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sophia</td>
-<td style="text-align: left;">78</td>
+<td style="text-align: right;">78</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Anna</td>
-<td style="text-align: left;">72</td>
+<td style="text-align: right;">72</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lea</td>
-<td style="text-align: left;">71</td>
+<td style="text-align: right;">71</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mila</td>
-<td style="text-align: left;">71</td>
+<td style="text-align: right;">71</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Clara</td>
-<td style="text-align: left;">67</td>
+<td style="text-align: right;">67</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sophie</td>
-<td style="text-align: left;">65</td>
+<td style="text-align: right;">65</td>
 <td style="text-align: left;">w</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Helena</td>
-<td style="text-align: left;">61</td>
+<td style="text-align: right;">61</td>
 <td style="text-align: left;">w</td>
 </tr>
 </tbody>
@@ -2714,7 +2716,17 @@ distill-header .nav a {
 <li>The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved.</li>
 </ul>
 <ol start="3" type="a">
-<li><p>Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?</p></li>
+<li>Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?</li>
+</ol>
+<h3 id="task-3-subtask-c">Task 3) Subtask c)</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>Sum of babys in 2023: 16753 </code></pre>
+<pre><code>Sum of babys in 2022: 17549 </code></pre>
+</div>
+<ul>
+<li>There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.</li>
+</ul>
+<ol start="4" type="a">
 <li><p>Add a new column <code>year</code> to both datasets which holds the correct year for each.</p></li>
 <li><p>Combine both datasets into one using <code>bind_rows()</code>.</p></li>
 <li><p>Combine the counts for same names to determine the most popular names across both years. Print out the top 10 names in a nicely formatted table for both years. Include a table caption.</p></li>
@@ -2737,7 +2749,7 @@ distill-header .nav a {
 </ol>
 <h2 id="final-note">Final Note</h2>
 <p>Make sure to push all your commits and changes to GitHub before submittining the exercise sheet.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
