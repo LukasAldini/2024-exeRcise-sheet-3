@@ -2426,15 +2426,294 @@ distill-header .nav a {
 <p>For this task you will upload your solution to GitHub.</p>
 <ol type="a">
 <li>Create a new repository on GitHub in your account named <code>exeRcise-sheet-3</code>. Make sure you create a <strong>public repository</strong> so we are able to see it for grading. Add the link to the repository below:</li>
+</ol>
+<ul>
+<li>Link to the GitHub repository: <a href="https://github.com/LukasAldini/2024-exeRcise-sheet-3" class="uri">https://github.com/LukasAldini/2024-exeRcise-sheet-3</a></li>
+</ul>
+<ol start="2" type="a">
 <li>Push your code to this new repository by copying and executing the snippet on github listed under <code>…or push an existing repository from the command line</code>.</li>
+</ol>
+<h3 id="task-2---subtask-b">Task 2) - Subtask b)</h3>
+<ul>
+<li>I have linked the Rmd directly via GitHub, so I can upload directly via “Commit”, “Pull” and then “Push” without having to use the command prompt. (Link to the guide on how I did it: <a href="https://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html" class="uri">https://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html</a>).</li>
+</ul>
+<ol start="3" type="a">
 <li>Regularly push your latest changes to GitHub again and especially do so when you are finished with this sheet.</li>
 </ol>
+<h3 id="task-2---subtask-c">Task 2) - Subtask c)</h3>
+<ul>
+<li>Latest changes upload(ed)</li>
+</ul>
 <h2 id="exercise-3-baby-names-in-munich-3.5-points">Exercise 3: Baby-Names in Munich (3.5 Points)</h2>
 <p>Download the latest open datasets on given names (“Vornamen”) from the open data repository of the city of Munich for the years <code>2023</code> and <code>2022</code>.</p>
 <p>Link: <a href="https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen" class="uri">https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen</a></p>
 <ol type="a">
-<li><p>Download the data for both years and track it in git. For small datasets like these adding them to git is not a problem.</p></li>
-<li><p>Load the data for both years into R. Check the type of the count variable (“Anzahl”) and look into the data to determine why it is not numeric? Fix the problem in an appropriate manner, it is OK if some of the counts are inaccurate because of this. Explain your solution and the repercussions.</p></li>
+<li>Download the data for both years and track it in git. For small datasets like these adding them to git is not a problem.</li>
+</ol>
+<h3 id="task-3-subtask-a">Task 3) Subtask a)</h3>
+<ul>
+<li>Load the data into GitHub</li>
+</ul>
+<ol start="2" type="a">
+<li>Load the data for both years into R. Check the type of the count variable (“Anzahl”) and look into the data to determine why it is not numeric? Fix the problem in an appropriate manner, it is OK if some of the counts are inaccurate because of this. Explain your solution and the repercussions.</li>
+</ol>
+<h3 id="task-3-subtask-b">Task 3) Subtask b)</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>vornamen_23</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: left;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Leon</td>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximilian</td>
+<td style="text-align: left;">105</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Paul</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Noah</td>
+<td style="text-align: left;">83</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anton</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jakob</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Felix</td>
+<td style="text-align: left;">78</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leo</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elias</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">m</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>vornamen_22</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: left;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: left;">103</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Emma</td>
+<td style="text-align: left;">101</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mia</td>
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sophia</td>
+<td style="text-align: left;">78</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Anna</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lea</td>
+<td style="text-align: left;">71</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mila</td>
+<td style="text-align: left;">71</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clara</td>
+<td style="text-align: left;">67</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sophie</td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Helena</td>
+<td style="text-align: left;">61</td>
+<td style="text-align: left;">w</td>
+</tr>
+</tbody>
+</table>
+<pre><code>[1] &quot;character&quot;</code></pre>
+<pre><code>[1] &quot;character&quot;</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>vornamen_23 with mutated Anzahl</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: left;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Leon</td>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximilian</td>
+<td style="text-align: left;">105</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Paul</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Noah</td>
+<td style="text-align: left;">83</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anton</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jakob</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Felix</td>
+<td style="text-align: left;">78</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leo</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elias</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">m</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>vornamen_22 with mutated Anzahl</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: left;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: left;">103</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Emma</td>
+<td style="text-align: left;">101</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mia</td>
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sophia</td>
+<td style="text-align: left;">78</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Anna</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lea</td>
+<td style="text-align: left;">71</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mila</td>
+<td style="text-align: left;">71</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clara</td>
+<td style="text-align: left;">67</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sophie</td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">w</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Helena</td>
+<td style="text-align: left;">61</td>
+<td style="text-align: left;">w</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved.</li>
+</ul>
+<ol start="3" type="a">
 <li><p>Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?</p></li>
 <li><p>Add a new column <code>year</code> to both datasets which holds the correct year for each.</p></li>
 <li><p>Combine both datasets into one using <code>bind_rows()</code>.</p></li>
@@ -2458,7 +2737,7 @@ distill-header .nav a {
 </ol>
 <h2 id="final-note">Final Note</h2>
 <p>Make sure to push all your commits and changes to GitHub before submittining the exercise sheet.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
