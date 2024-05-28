@@ -158,6 +158,22 @@ knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anza
 
 e)  Combine both datasets into one using `bind_rows()`.
 
+Task 3) Subtask e) 
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
+## Combine the data
+combined_data <- bind_rows(vornamen_23, vornamen_22)
+
+## Rows to show it worked
+selected_rows <- c(1:5, 8674:8679)
+
+## Checkup
+knitr::kable(combined_data[selected_rows, ], caption = "Ausgewählte Zeilen von combined_data")
+
+```
+
+
 f)  Combine the counts for same names to determine the most popular names across both years. Print out the top 10 names in a nicely formatted table for both years. Include a table caption.
 
 ## Exercise 4: Open Analysis (4 points)
