@@ -2727,7 +2727,157 @@ distill-header .nav a {
 <li>There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.</li>
 </ul>
 <ol start="4" type="a">
-<li><p>Add a new column <code>year</code> to both datasets which holds the correct year for each.</p></li>
+<li>Add a new column <code>year</code> to both datasets which holds the correct year for each.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 2: </span>vornamen_23 with mutated Anzahl &amp; year</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: right;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+<th style="text-align: right;">year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Leon</td>
+<td style="text-align: right;">107</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximilian</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Paul</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Noah</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anton</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jakob</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Felix</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leo</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elias</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: left;">m</td>
+<td style="text-align: right;">2023</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 2: </span>vornamen_22 with mutated Anzahl &amp; year</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vorname</th>
+<th style="text-align: right;">Anzahl</th>
+<th style="text-align: left;">Geschlecht</th>
+<th style="text-align: right;">year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Emilia</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Emma</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mia</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sophia</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Anna</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lea</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mila</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clara</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sophie</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Helena</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: left;">w</td>
+<td style="text-align: right;">2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol start="5" type="a">
 <li><p>Combine both datasets into one using <code>bind_rows()</code>.</p></li>
 <li><p>Combine the counts for same names to determine the most popular names across both years. Print out the top 10 names in a nicely formatted table for both years. Include a table caption.</p></li>
 </ol>

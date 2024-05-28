@@ -123,6 +123,7 @@ c)  Calculate the total number of babies born in Munich in 2022 and 2023. Which 
 ### Task 3) Subtask c)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
 ## Calc. total
 total_2023 <- sum(vornamen_23$Anzahl, na.rm = TRUE)
 total_2022 <- sum(vornamen_22$Anzahl, na.rm = TRUE)
@@ -130,11 +131,28 @@ total_2022 <- sum(vornamen_22$Anzahl, na.rm = TRUE)
 ## Print calculated total
 cat("Sum of babys in 2023:", total_2023, "\n")
 cat("Sum of babys in 2022:", total_2022, "\n")
+
 ```
 
 - There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.
 
 d)  Add a new column `year` to both datasets which holds the correct year for each.
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
+## For vornamen_23
+vornamen_23 <- vornamen_23 %>%
+  mutate(year = 2023)
+
+## For vornamen_22
+vornamen_22 <- vornamen_22 %>%
+  mutate(year = 2022)
+
+## Checkup
+knitr::kable(head(vornamen_23, n = 10), caption = "vornamen_23 with mutated Anzahl & year")
+knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anzahl & year")
+
+```
 
 e)  Combine both datasets into one using `bind_rows()`.
 
