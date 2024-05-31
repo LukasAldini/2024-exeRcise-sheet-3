@@ -177,7 +177,7 @@ combined_data <- bind_rows(vornamen_23, vornamen_22)
 selected_rows <- c(1:5, 8674:8679)
 
 ## Checkup
-knitr::kable(combined_data[selected_rows, ], caption = "Ausgewählte Zeilen von combined_data")
+knitr::kable(combined_data[selected_rows, ], caption = "Checkup top 10 from combined datasets")
 
 ```
 
@@ -235,11 +235,65 @@ d)  Come up with a (research) question you want to answer with the data and brie
 
 ### Task 4) Subtask d)
 
--   How dangerous are sharks really? And where is the danger of a shark attack most likely?
+-   What is the fatality rate of shark attacks worldwide, where do they occur most often and what are the differences between countries in fatalities relative to attacks?
 
     -   This is a good research question, because: An assessment of whether sharks pose a real threat and, if so, where this is greatest, could help to implement prevention strategies and risk management in the relevant areas.
 
 e)  Use R to answer your chosen question.
+
+### Task 4) Subtask e)
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+## Generate a comparison variable: (lethality, total attacks and total fatal attacks - worldwide)
+
+## Filter for "World"
+world_data <- subset(SharkAttacks, Entity == "World")
+
+## Calc. fatal. & normal attacks
+total_fatalities <- sum(world_data$`Total number of shark attack fatalities (GSAF (2018))`)
+total_attacks <- sum(world_data$`Total number of shark attacks (GSAF (2018))`)
+
+## Calc. lethality
+lethality_rate <- (total_fatalities / total_attacks) * 100
+
+```
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+## Generate the sum of all countrys & calc. the lethality of those 
+
+## Sum countrys
+library(tidyverse)
+
+CountrySum <- SharkAttacks %>%
+  group_by(Entity) %>%
+  summarise(SumOfAttacks = sum(`Total number of shark attacks (GSAF (2018))`, na.rm = TRUE),
+            SumOfLethalAttacks = sum(`Total number of shark attack fatalities (GSAF (2018))`, na.rm = TRUE)) %>%
+  arrange(desc(SumOfAttacks))
+
+## Calc. lethailty by country
+CountrySum <- CountrySum %>%
+  mutate(FatalityRate = (SumOfLethalAttacks / SumOfAttacks) * 100)
+```
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
+## Table to visualize the results
+
+## Table with knitr
+knitr::kable(head(CountrySum, 10), caption = "Shark Attack & Lethality By Country")
+
+```
+
+-   Table 5 shows the number of shark attacks, how many of them were fatal, and the resulting fatality rate in percent. Here, 'World' represents the total of all incidents. The table is sorted in descending order according to the number of attacks. This arrangement ensures that countries with only one attack are listed further down due to their lower relevance.
+
+    -   Note: only the top 10 are shown to reduce the amount of output As required in the “General Remarks”.
+
+-   **Answer to the research question(s)**
+
+    -   ***What is the fatality rate of shark attacks worldwide?***
+        -   *Answer: As table 5 shows: the overall (worldwide) fatality-rate of shark attacks is 23.88% (from -725 B.C. to 2018)*
+    -   ***Where do they occur most often and what are the differences between countries in fatalities relative to attacks?***
+        -   *Answer: As table 5 shows: the most attacks occur in the US, Austrailia, South Africa, Papua New Guinea, New Zealand, Bahamas, Brazil, Mexico and Fijii. THe highest fatality-rates among the countries with the most attacks occurs in: mexico (55%) as well as in Papua New Guinea (43%).*
 
 f)  Create a meaningful plot / figure with the dataset. Make sure to provide a figure caption (via the chunk options / Rmarkdown) and correctly label the figure.
 
