@@ -158,7 +158,7 @@ knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anza
 
 e)  Combine both datasets into one using `bind_rows()`.
 
-Task 3) Subtask e) 
+### Task 3) Subtask e) 
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 
@@ -201,9 +201,13 @@ This exercise is a bit more open-ended. You can choose any dataset from [Our Wor
 
 a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets> and choose a dataset that interests you. You can have a look at <https://ourworldindata.org/> to gather some inspiration.
 
+### Task 4) Subtask a)
+
 - Chosen Dataset: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
 
 b)  Download the dataset and track it in git.
+
+### Task 4) Subtask b)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 ## Read csv
@@ -212,9 +216,10 @@ SharkAttacks <- read_csv("SharkAttacks.csv")
 
 c)  Put the name / title of the dataset and a link to it below.
 
--   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/>...
+### Task 4) Subtask c)
 
+-   Dataset Name: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
+-   Link: <https://github.com/owid/owid-datasets/blob/master/datasets/Shark%20attacks%20and%20fatalities%20-%20Global%20Shark%20Attack%20File%20(GSAF)%20(2018)%20/README.md>
 
 
 
