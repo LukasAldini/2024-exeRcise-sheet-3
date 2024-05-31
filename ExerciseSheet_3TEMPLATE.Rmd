@@ -205,7 +205,10 @@ a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets> and choos
 
 b)  Download the dataset and track it in git.
 
-
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+## Read csv
+SharkAttacks <- read_csv("SharkAttacks.csv")
+```
 
 c)  Put the name / title of the dataset and a link to it below.
 
