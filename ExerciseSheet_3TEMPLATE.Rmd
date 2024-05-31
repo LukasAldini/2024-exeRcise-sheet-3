@@ -221,7 +221,7 @@ c)  Put the name / title of the dataset and a link to it below.
 -   Dataset Name: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
 -   Link: <https://github.com/owid/owid-datasets/blob/master/datasets/Shark%20attacks%20and%20fatalities%20-%20Global%20Shark%20Attack%20File%20(GSAF)%20(2018)%20/README.md>
 
-
+  - Note: the dataset only holds attacks & deaths, the attack-categories are not included.  
 
 d)  Come up with a (research) question you want to answer with the data and briefly explain why you believe this is an interesting question within one sentence. It should be a question that can be answered with the dataset and using R.
 
