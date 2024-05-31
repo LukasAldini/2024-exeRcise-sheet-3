@@ -30,14 +30,18 @@ c)  For all of the following tasks in this exercise sheet we ask you to always c
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a commit after this answer, see *1c*)
 
-### Task 1) - Subtask d) 
--   Strenghts
-  - One of the most important strengths of Git is version control. This makes it possible to view changes retrospectively and adapt them if necessary.
-  - Second: Git enables r projects to be uploaded to GitHub. This enables effortless collaboration with other researchers. 
+### Task 1) - Subtask d)
 
-- Weaknesses
-  - One problem with Git or GitHub is that the initial process can be complicated; it takes time to get everything up and running and can cause problems. 
-  - Another problem is that you have to think about when to make a “commit”, because it is of little use, for example, if you code 300 lines and then make a commit because too much has happened to be able to track it retroactively.
+-   Strenghts
+
+-   One of the most important strengths of Git is version control. This makes it possible to view changes retrospectively and adapt them if necessary.
+
+-   Second: Git enables r projects to be uploaded to GitHub. This enables effortless collaboration with other researchers.
+
+-   Weaknesses
+
+    -   One problem with Git or GitHub is that the initial process can be complicated; it takes time to get everything up and running and can cause problems.
+    -   Another problem is that you have to think about when to make a “commit”, because it is of little use, for example, if you code 300 lines and then make a commit because too much has happened to be able to track it retroactively.
 
 e)  Knit this exercise sheet. Some new files will automatically be generated when knitting the sheet e.g. the HTML page. Ignore these files, as we only want to track the source files themselves.
 
@@ -47,17 +51,19 @@ For this task you will upload your solution to GitHub.
 
 a)  Create a new repository on GitHub in your account named `exeRcise-sheet-3`. Make sure you create a **public repository** so we are able to see it for grading. Add the link to the repository below:
 
-- Link to the GitHub repository: https://github.com/LukasAldini/2024-exeRcise-sheet-3
+-   Link to the GitHub repository: <https://github.com/LukasAldini/2024-exeRcise-sheet-3>
 
 b)  Push your code to this new repository by copying and executing the snippet on github listed under `…or push an existing repository from the command line`.
 
 ### Task 2) - Subtask b)
-- I have linked the Rmd directly via GitHub, so I can upload directly via “Commit”, “Pull” and then “Push” without having to use the command prompt. (Link to the guide on how I did it: https://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html). 
+
+-   I have linked the Rmd directly via GitHub, so I can upload directly via “Commit”, “Pull” and then “Push” without having to use the command prompt. (Link to the guide on how I did it: <https://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html>).
 
 c)  Regularly push your latest changes to GitHub again and especially do so when you are finished with this sheet.
 
-### Task 2) - Subtask c) 
-- Latest changes upload(ed)
+### Task 2) - Subtask c)
+
+-   Latest changes upload(ed)
 
 ## Exercise 3: Baby-Names in Munich (3.5 Points)
 
@@ -67,12 +73,14 @@ Link: <https://opendata.muenchen.de/dataset/vornamen-von-neugeborenen>
 
 a)  Download the data for both years and track it in git. For small datasets like these adding them to git is not a problem.
 
-### Task 3) Subtask a) 
-- Load the data into GitHub
+### Task 3) Subtask a)
+
+-   Load the data into GitHub
 
 b)  Load the data for both years into R. Check the type of the count variable ("Anzahl") and look into the data to determine why it is not numeric? Fix the problem in an appropriate manner, it is OK if some of the counts are inaccurate because of this. Explain your solution and the repercussions.
 
 ### Task 3) Subtask b)
+
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 
 library("kableExtra")
@@ -116,7 +124,7 @@ knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anza
 
 ```
 
-- The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved. 
+-   The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved.
 
 c)  Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?
 
@@ -134,7 +142,7 @@ cat("Sum of babys in 2022:", total_2022, "\n")
 
 ```
 
-- There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.
+-   There were more babies in Munich in 2022 than in 2023. Note: By replacing the category “4 or less” with the number 2, a slight fluctuation is possible, but in absolute terms 2022 should have more babies than 2023 despite the fluctuation.
 
 d)  Add a new column `year` to both datasets which holds the correct year for each.
 
@@ -158,7 +166,7 @@ knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anza
 
 e)  Combine both datasets into one using `bind_rows()`.
 
-### Task 3) Subtask e) 
+### Task 3) Subtask e)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 
@@ -194,7 +202,6 @@ knitr::kable(top_10_all, caption = "Top 10 names for 2022 and 2023")
 
 ```
 
-
 ## Exercise 4: Open Analysis (4 points)
 
 This exercise is a bit more open-ended. You can choose any dataset from [Our World in Data](https://ourworldindata.org/) and analyze it, while determining the research question yourself.
@@ -203,7 +210,7 @@ a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets> and choos
 
 ### Task 4) Subtask a)
 
-- Chosen Dataset: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
+-   Chosen Dataset: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
 
 b)  Download the dataset and track it in git.
 
@@ -219,17 +226,20 @@ c)  Put the name / title of the dataset and a link to it below.
 ### Task 4) Subtask c)
 
 -   Dataset Name: Shark attacks and fatalities - Global Shark Attack File (GSAF) (2018)
--   Link: <https://github.com/owid/owid-datasets/blob/master/datasets/Shark%20attacks%20and%20fatalities%20-%20Global%20Shark%20Attack%20File%20(GSAF)%20(2018)%20/README.md>
 
-  - Note: the dataset only holds attacks & deaths, the attack-categories are not included.  
+-   Link: [https://github.com/owid/owid-datasets/blob/master/datasets/Shark%20attacks%20and%20fatalities%20-%20Global%20Shark%20Attack%20File%20(GSAF)%20(2018)%20/README.md](https://github.com/owid/owid-datasets/blob/master/datasets/Shark%20attacks%20and%20fatalities%20-%20Global%20Shark%20Attack%20File%20(GSAF)%20(2018)%20/README.md){.uri}
+
+    -   Note: the dataset only holds attacks & deaths, the attack-categories are not included.
 
 d)  Come up with a (research) question you want to answer with the data and briefly explain why you believe this is an interesting question within one sentence. It should be a question that can be answered with the dataset and using R.
 
+### Task 4) Subtask d)
 
+-   How dangerous are sharks really? And where is the danger of a shark attack most likely?
+
+    -   This is a good research question, because: An assessment of whether sharks pose a real threat and, if so, where this is greatest, could help to implement prevention strategies and risk management in the relevant areas.
 
 e)  Use R to answer your chosen question.
-
-
 
 f)  Create a meaningful plot / figure with the dataset. Make sure to provide a figure caption (via the chunk options / Rmarkdown) and correctly label the figure.
 
