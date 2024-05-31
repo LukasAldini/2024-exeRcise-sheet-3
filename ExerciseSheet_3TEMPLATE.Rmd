@@ -293,9 +293,39 @@ knitr::kable(head(CountrySum, 10), caption = "Shark Attack & Lethality By Countr
     -   ***What is the fatality rate of shark attacks worldwide?***
         -   *Answer: As table 5 shows: the overall (worldwide) fatality-rate of shark attacks is 23.88% (from -725 B.C. to 2018)*
     -   ***Where do they occur most often and what are the differences between countries in fatalities relative to attacks?***
-        -   *Answer: As table 5 shows: the most attacks occur in the US, Austrailia, South Africa, Papua New Guinea, New Zealand, Bahamas, Brazil, Mexico and Fijii. THe highest fatality-rates among the countries with the most attacks occurs in: mexico (55%) as well as in Papua New Guinea (43%).*
+        -   *Answer: As table 5 shows: the most attacks occur in the US, Austrailia, South Africa, Papua New Guinea, New Zealand, Bahamas, Brazil, Mexico and Fijii. THe highest fatality-rates among the countries with the most attacks occur in: mexico (55%) as well as in Papua New Guinea (43%).*
+
+-   ***Discussion:***
+
+    -   From the data it can therefore be said that: Shark attacks are 24% fatal worldwide. However, the lethality varies greatly depending on the country in question. The relevant factors would have to be determined in further studies. Conceivable factors would be: different shark breeds, differences in medical care and, of course, temporal aspects (the data were considered independently of time.
 
 f)  Create a meaningful plot / figure with the dataset. Make sure to provide a figure caption (via the chunk options / Rmarkdown) and correctly label the figure.
+
+### Task 4) Subtask f)
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE, fig.caption="Top 10 Countries: Shark Attacks and Lethality"}
+library(ggplot2)
+
+## Filter top 10
+top_countries <- head(CountrySum, 10)
+
+## Plot
+ggplot(top_countries, aes(x = Entity)) +
+  geom_bar(aes(y = SumOfAttacks, fill = "Attacks"), stat = "identity", width = 0.5) +
+  geom_bar(aes(y = SumOfLethalAttacks, fill = "Lethal Attacks"), stat = "identity", width = 0.5) +
+  ggtitle("Top 10 Countries: Shark Attacks and Lethality") +
+  xlab("Top 10 countries (by number of attacks)") +
+  ylab("Amount of Attacks/Lethal Attacks") +
+  scale_fill_manual(values = c("Attacks" = "#66c2a5", "Lethal Attacks" = "#fc8d62"),
+                    guide = guide_legend(title = NULL, 
+                                         label = c("Attacks", "Lethal Attacks"),
+                                         title.position = "left")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom",
+        legend.title.align = 0.5)
+```
+
+- The plot shows the results of Table 5 from Task 4) Subtask e) graphically: the global lethality of shark attacks (right) can be used as a reference. The graph shows that lethality is highest in Mexico and Papua New Guinea. By far the highest number of shark attacks occurs in the USA, followed by Australia. 
 
 ## Final Note
 
