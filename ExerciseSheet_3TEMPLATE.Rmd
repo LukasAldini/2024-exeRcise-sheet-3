@@ -34,9 +34,9 @@ d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a commit a
 
 -   Strenghts
 
--   One of the most important strengths of Git is version control. This makes it possible to view changes retrospectively and adapt them if necessary.
+    -   One of the most important strengths of Git is version control. This makes it possible to view changes retrospectively and adapt them if necessary.
 
--   Second: Git enables r projects to be uploaded to GitHub. This enables effortless collaboration with other researchers.
+    -   Second: Git enables r projects to be uploaded to GitHub. This enables effortless collaboration with other researchers.
 
 -   Weaknesses
 
@@ -91,8 +91,8 @@ vornamen_23 <- read_csv("vornamen-muenchen-2023.csv")
 vornamen_22 <- read_csv("open_data_portal_2022.csv")
 
 ## Checkup
-knitr::kable(head(vornamen_23, n = 10), caption = "vornamen_23")
-knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22")
+knitr::kable(tail(vornamen_23, n = 10), caption = "vornamen_23")
+knitr::kable(tail(vornamen_22, n = 10), caption = "vornamen_22")
 
 ## Check type of "Anzahl" 
 mode(vornamen_22$Anzahl)
@@ -119,12 +119,13 @@ mode(vornamen_22$Anzahl)
 mode(vornamen_23$Anzahl)
 
 ## Checkup after mutate
-knitr::kable(head(vornamen_23, n = 10), caption = "vornamen_23 with mutated Anzahl")
-knitr::kable(head(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anzahl")
+knitr::kable(tail(vornamen_23, n = 10), caption = "vornamen_23 with mutated Anzahl")
+knitr::kable(tail(vornamen_22, n = 10), caption = "vornamen_22 with mutated Anzahl")
 
 ```
 
 -   The problem that there is a line with “4 or less” has been solved as follows: all problematic entries (i.e. “4 or less”) have been replaced by the arithmetic mean of the possible values, in this case 2 (0,1,2,3,4 = 10/5=2). This is sometimes imprecise, but in any case the smallest deviation from the “true” value is achieved.
+-   Note: the tables show the bottom 10 rows to show the changes of "4 or less" to 2.
 
 c)  Calculate the total number of babies born in Munich in 2022 and 2023. Which year had the bigger baby-boom?
 
@@ -217,8 +218,10 @@ b)  Download the dataset and track it in git.
 ### Task 4) Subtask b)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
 ## Read csv
 SharkAttacks <- read_csv("SharkAttacks.csv")
+
 ```
 
 c)  Put the name / title of the dataset and a link to it below.
@@ -235,6 +238,8 @@ d)  Come up with a (research) question you want to answer with the data and brie
 
 ### Task 4) Subtask d)
 
+**Research question:**
+
 -   What is the fatality rate of shark attacks worldwide, where do they occur most often and what are the differences between countries in fatalities relative to attacks?
 
     -   This is a good research question, because: An assessment of whether sharks pose a real threat and, if so, where this is greatest, could help to implement prevention strategies and risk management in the relevant areas.
@@ -244,6 +249,7 @@ e)  Use R to answer your chosen question.
 ### Task 4) Subtask e)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
 ## Generate a comparison variable: (lethality, total attacks and total fatal attacks - worldwide)
 
 ## Filter for "World"
@@ -259,6 +265,7 @@ lethality_rate <- (total_fatalities / total_attacks) * 100
 ```
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+
 ## Generate the sum of all countrys & calc. the lethality of those 
 
 ## Sum countrys
@@ -273,6 +280,7 @@ CountrySum <- SharkAttacks %>%
 ## Calc. lethailty by country
 CountrySum <- CountrySum %>%
   mutate(FatalityRate = (SumOfLethalAttacks / SumOfAttacks) * 100)
+
 ```
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
@@ -284,7 +292,7 @@ knitr::kable(head(CountrySum, 10), caption = "Shark Attack & Lethality By Countr
 
 ```
 
--   Table 5 shows the number of shark attacks, how many of them were fatal, and the resulting fatality rate in percent. Here, 'World' represents the total of all incidents. The table is sorted in descending order according to the number of attacks. This arrangement ensures that countries with only one attack are listed further down due to their lower relevance.
+-   Table 5 shows the number of shark attacks, how many of them were fatal, and the resulting fatality rate in percent. Here, 'World' represents the total of all incidents. The table is sorted by country in descending order according to the number of attacks. This arrangement ensures that countries with only one attack are listed further down due to their lower relevance.
 
     -   Note: only the top 10 are shown to reduce the amount of output As required in the “General Remarks”.
 
@@ -293,17 +301,18 @@ knitr::kable(head(CountrySum, 10), caption = "Shark Attack & Lethality By Countr
     -   ***What is the fatality rate of shark attacks worldwide?***
         -   *Answer: As table 5 shows: the overall (worldwide) fatality-rate of shark attacks is 23.88% (from -725 B.C. to 2018)*
     -   ***Where do they occur most often and what are the differences between countries in fatalities relative to attacks?***
-        -   *Answer: As table 5 shows: the most attacks occur in the US, Austrailia, South Africa, Papua New Guinea, New Zealand, Bahamas, Brazil, Mexico and Fijii. THe highest fatality-rates among the countries with the most attacks occur in: mexico (55%) as well as in Papua New Guinea (43%).*
+        -   *Answer: As table 5 shows: the most attacks occur in the US, Austrailia, South Africa, Papua New Guinea, New Zealand, Bahamas, Brazil, Mexico and Fijii. The highest fatality-rates among the countries with the most attacks occur in: Mexico (55%) as well as in Papua New Guinea (43%).*
 
 -   ***Discussion:***
 
-    -   From the data it can therefore be said that: Shark attacks are 24% fatal worldwide. However, the lethality varies greatly depending on the country in question. The relevant factors would have to be determined in further studies. Conceivable factors would be: different shark breeds, differences in medical care and, of course, temporal aspects (the data were considered independently of time.
+    -   From the data it can therefore be said that: Shark attacks have a fatality rate of 24%. However, the lethality varies greatly depending on the country in question. The relevant factors would have to be determined in further studies. Conceivable factors would be: different shark breeds, differences in medical care and, of course, temporal aspects (the data were considered independently of time.
 
 f)  Create a meaningful plot / figure with the dataset. Make sure to provide a figure caption (via the chunk options / Rmarkdown) and correctly label the figure.
 
 ### Task 4) Subtask f)
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE, fig.caption="Top 10 Countries: Shark Attacks and Lethality"}
+
 library(ggplot2)
 
 ## Filter top 10
@@ -323,9 +332,10 @@ ggplot(top_countries, aes(x = Entity)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "bottom",
         legend.title.align = 0.5)
+
 ```
 
-- The plot shows the results of Table 5 from Task 4) Subtask e) graphically: the global lethality of shark attacks (right) can be used as a reference. The graph shows that lethality is highest in Mexico and Papua New Guinea. By far the highest number of shark attacks occurs in the USA, followed by Australia. 
+-   The plot shows the results of Table 5 from Task 4) Subtask e) graphically: the global lethality of shark attacks (right) can be used as a reference. The graph shows that lethality is highest in Mexico and Papua New Guinea. By far the highest number of shark attacks occurs in the USA, followed by Australia.
 
 ## Final Note
 
